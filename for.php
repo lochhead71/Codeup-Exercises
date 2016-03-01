@@ -9,6 +9,10 @@ fwrite(STDOUT, "Please type another: ");
 fwrite(STDOUT, "Choose an increment value: ");
 	$incrValue = (int)trim(fgets(STDIN));
 
+if ((bool)$incrValue == false) {
+	$incrValue = 1;
+}
+
 for ($a = $startNum; $a <= $endNum; $a += $incrValue) {
 	echo "$a\n";
 }
