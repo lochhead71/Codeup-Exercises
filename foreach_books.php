@@ -24,11 +24,11 @@ $books = array(
 );
 
 foreach ($books as $title => $bookData) {
-	if ($bookData['published'] > 1950) {
+	// if ($bookData['published'] > 1950) {
 		echo "Title: " . $title . PHP_EOL;
-		echo "Published: " . $bookData['published'] . PHP_EOL;
-		echo "Author: " . $bookData['author'] . PHP_EOL;
-		echo "Number of pages: " . $bookData['pages'] . PHP_EOL;
+		foreach ($bookData as $info => $value) {
+			echo ucwords($info) . ": $value" . PHP_EOL;
+		}
 		echo "\n";
-	}
+	// }
 }
