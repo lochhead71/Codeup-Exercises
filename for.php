@@ -6,6 +6,9 @@ fwrite(STDOUT, "Please type an integer: ");
 fwrite(STDOUT, "Please type another: ");
 	$endNum = (int)trim(fgets(STDIN));
 
-for ($a = $startNum; $a <= $endNum; $a++) {
+fwrite(STDOUT, "Choose an increment value: ");
+	$incrValue = (int)trim(fgets(STDIN));
+
+for ($a = $startNum; $a <= $endNum; $a += $incrValue) {
 	echo "$a\n";
 }
