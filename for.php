@@ -13,6 +13,10 @@ if ((bool)$incrValue == false) {
 	$incrValue = 1;
 }
 
-for ($a = $startNum; $a <= $endNum; $a += $incrValue) {
-	echo "$a\n";
-}
+do {
+
+	for ($a = $startNum; $a <= $endNum; $a += $incrValue) {
+		echo "$a\n"; d
+	}
+
+} while {is_numeric($startNum) && is_numeric($endNum) && is_numeric($incrValue)}
