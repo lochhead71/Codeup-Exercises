@@ -49,7 +49,8 @@ ksort($companies);
 
 foreach ($companies as $coName => $array) {
     $techCompany = "";
-    $techCompany .= $coName . " is a technology company, founded by:\n";
+    $techCompany .= $coName . " is a technology company founded by:\n";
+    sort($array);
     foreach ($array as $key => $value) {
         $techCompany .= "  $value" . PHP_EOL;
     }

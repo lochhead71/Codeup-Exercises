@@ -27,7 +27,7 @@ function inspect($parameter) {
 			$description = '';
 			$description .= "This is an array with the following items:\n";
 			foreach ($parameter as $items) {
-				$description .= "  $items" . PHP_EOL;
+				$description .= "  {$items}" . PHP_EOL;
 			}
 			return $description;
     	}
