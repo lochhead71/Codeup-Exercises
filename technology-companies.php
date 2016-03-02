@@ -45,7 +45,7 @@ $companies = [
     ]
 ];
 
-ksort($companies);
+arsort($companies);
 
 foreach ($companies as $coName => $array) {
     $techCompany = "";
