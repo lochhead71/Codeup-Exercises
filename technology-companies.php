@@ -45,6 +45,8 @@ $companies = [
     ]
 ];
 
+ksort($companies);
+
 foreach ($companies as $coName => $array) {
     $techCompany = "";
     $techCompany .= $coName . " is a technology company, founded by:\n";
