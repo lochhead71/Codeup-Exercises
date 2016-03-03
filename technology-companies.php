@@ -47,12 +47,18 @@ $companies = [
 
 arsort($companies);
 
-foreach ($companies as $coName => $array) {
-    $techCompany = "";
-    $techCompany .= $coName . " is a technology company founded by:\n";
-    sort($array);
-    foreach ($array as $key => $value) {
-        $techCompany .= "  $value" . PHP_EOL;
-    }
-    echo $techCompany;
+foreach ($companies as $coName => $people) {
+
+    asort($people);
+    $companies[$coName] = $people;
+
+    // $techCompany = "";
+    // $techCompany .= $coName . " is a technology company founded by:\n";
+    // sort($people);
+    // foreach ($people as $key => $value) {
+    //     $techCompany .= "  $value" . PHP_EOL;
+    // }
+    // echo $techCompany;
 }
+
+var_dump($companies);
