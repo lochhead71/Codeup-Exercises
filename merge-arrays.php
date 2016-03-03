@@ -10,7 +10,7 @@ $evenMoreNames = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam', 'Joey', 'Sam', 'Pete'];
 
 function combineArrays($firstArray, $secondArray) {
 	$mergedArrays = [];
-	if (count($firstArray) > count($secondArray)) {
+	if (count($firstArray) >= count($secondArray)) {
 		$longerArray = $firstArray;
 		$shorterArray = $secondArray;
 	} else {
