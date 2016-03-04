@@ -10,5 +10,14 @@ fwrite($handle, $log);
 fclose($handle);
 }
 
-logMessage("INFO", "This is an info message.");
-logMessage("ERROR", "This is an info message.");
+function infoMessage($message) {
+	logMessage("INFO", $message);
+}
+
+function errorMessage($message) {
+	logMessage("ERROR", $message);
+}
+
+infoMessage("This is an info message.");
+
+errorMessage("This is an error message.");
