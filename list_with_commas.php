@@ -1,8 +1,10 @@
 <?php
 
  // Converts array into list n1, n2, ..., and n3
- function humanizedList($array) {
- 	sort($array);
+ function humanizedList($array, $alpha = false) {
+ 	if ($alpha == true) {
+ 		sort($array);
+	}
 	$lastGuy = "and " . array_pop($array);
 	array_push($array, $lastGuy);
 	$newString = implode(", ", $array);
@@ -16,7 +18,7 @@
  $physicistsArray = explode(', ', $physicistsString);
 
  // Humanize that list
- $famousFakePhysicists = humanizedList($physicistsArray);
+ $famousFakePhysicists = humanizedList($physicistsArray, true);
 
  // Output sentence
  echo "Some of the most famous fictional theoretical physicists are {$famousFakePhysicists}.\n";
